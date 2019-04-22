@@ -12,7 +12,7 @@ def getClusters(df, epsInmeter, minObjects):
     return clusters
 
 def main():
-    path = 'D:\\harsha\\Mtech_SE_2017\\SEM 3\\ProjectDataSet\\Data\\csvFileForMerge\\distance_File\\RouteWiseData'
+    path = '.csv file of Latitude and longitude data for practical stop on specific route R'
     drctry = os.chdir(path)
     listDir = os.listdir(drctry)
     number = 0
@@ -27,7 +27,7 @@ def main():
         Total_Correct_Cluster = 0  
         for num in range(0,100):
             df1 = pd.read_csv(path+'\\'+str(listDir[num]))
-            df = pd.read_csv('D:\\harsha\\Mtech_SE_2017\\SEM 3\\ProjectDataSet\\Data\\csvFileForMerge\\originalBusStopData\\OriginalStopXY.csv')
+            df = pd.read_csv('.csv file of latitude and longitude data of planned stop on specific route R')
             xs = df1['X']
             ys = df1['Y']
             stop_id = df1['Stop_ID']
